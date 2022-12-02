@@ -27,5 +27,5 @@ PATCH http://localhost:3000/inventory/6389aec0acda261ddf1dd43e
 Content-Type: application/json
 
 {
-    "price": "$18.00"
+    "price": "$20.00"
 }
