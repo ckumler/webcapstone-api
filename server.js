@@ -25,4 +25,7 @@ app.use(express.urlencoded({extended: false}))
 const inventoryRouter = require('./routes/inventory')
 app.use('/inventory', inventoryRouter)
 
+const contactUsRouter = require('./routes/contactUs')
+app.use('/contactUs', contactUsRouter)
+
 app.listen(3000, () => console.log('Server Started'))
