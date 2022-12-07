@@ -16,7 +16,7 @@ app.use(express.json())
 
 // Add the cors middleware to your API
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: process.env.CORS_ORGIN,
 }));
 
 const inventoryRouter = require('./routes/inventory')
