@@ -4,7 +4,7 @@ require('dotenv').config()
 
 const cors = require('cors')
 const express = require('express')
-const app = express()
+let app = express()
 const mongoose = require('mongoose')
 
 mongoose.connect(process.env.DATABASE_URL)
@@ -15,12 +15,7 @@ db.once('open', () => console.log('Connected to Database'))
 app.use(express.json())
 
 // Add the cors middleware to your API
-const corsOptions = {
-origin: [/\.onrender\.com$/, /\S*localhost\:3000\S*/],
-    methods: 'GET, POST, PUT, DELETE',
-    credentials: true,
-};
-app.use(cors(corsOptions));
+app.options('*', cors());
 
 const inventoryRouter = require('./routes/inventory')
 app.use('/inventory', inventoryRouter)
