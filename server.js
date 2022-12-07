@@ -1,5 +1,3 @@
-//start
-
 require('dotenv').config()
 
 const cors = require('cors')
