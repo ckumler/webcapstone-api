@@ -15,9 +15,8 @@ db.once('open', () => console.log('Connected to Database'))
 app.use(express.json())
 
 // Add the cors middleware to your API
-app.use(cors({
-  origin: '*',
-}));
+app.options('*', cors())
+
 
 const inventoryRouter = require('./routes/inventory')
 app.use('/inventory', inventoryRouter)
