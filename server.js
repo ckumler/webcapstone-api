@@ -28,4 +28,7 @@ app.use('/inventory', inventoryRouter)
 const contactUsRouter = require('./routes/contactus')
 app.use('/contactUs', contactUsRouter)
 
+const donationRouter = require('./routes/donation')
+app.use('/donation', donationRouter)
+
 app.listen(3000, () => console.log('Server Started'))
