@@ -16,7 +16,7 @@ app.use(express.json())
 
 // Add the cors middleware to your API
 const corsOptions = {
-    origin: ["http://localhost:3000", /\.onrender\.com$/],
+    origin: ["http://localhost:3000", /\.onrender\.com$/, "*"],
     methods: ["GET,POST, PUT, DELETE"],
     credentials: true,
 };
