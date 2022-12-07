@@ -14,7 +14,7 @@ db.once('open', () => console.log('Connected to Database'))
 
 const corsOptions = {
   origin: ["http://localhost:3000", /\.onrender\.com$/],
-  methods: ["GET,POST, PUT, DELETE"],
+  methods: ["GET, POST, PUT, PATCH, DELETE"],
   credentials: true,
 };
 app.use(cors(corsOptions));
