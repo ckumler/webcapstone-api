@@ -29,4 +29,7 @@ app.use('/contactUs', contactUsRouter)
 const donationRouter = require('./routes/donation')
 app.use('/donation', donationRouter)
 
+const volunteerRouter = require('./routes/volunteer')
+app.use('/volunteer', volunteerRouter)
+
 app.listen(3000, () => console.log('Server Started'))
